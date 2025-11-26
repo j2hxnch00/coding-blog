@@ -1,0 +1,198 @@
+Here’s your updated blog setup, Simon—with the aesthetic banner added and the transparent “J2HXNCH0” overlay styled like a YouTube header. The image blends with grey, white, and light green tones to match your theme.
+
+🌐 HTML (index.html)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Simon Joven Munga - Coding Blog</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="banner">
+    <div class="overlay-text">J2HXNCH0</div>
+  </div>
+
+  <header>
+    <h1>Simon Joven Munga</h1>
+    <p>Coding as a Hobby</p>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#posts">Blog Posts</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I’m Simon Joven Munga. Coding is more than just a skill for me—it’s a hobby, 
+      a way to create, and a way to express ideas. This blog is where I share my journey, 
+      projects, and thoughts about programming.
+    </p>
+  </section>
+
+  <section id="posts">
+    <h2>Latest Blog Posts</h2>
+    <div class="post">
+      <h3>Why Coding Feels Like Art 🎨</h3>
+      <p>Coding lets me design interactive worlds, dashboards, and animations. It’s like painting with logic.</p>
+    </div>
+    <div class="post">
+      <h3>My Favorite Coding Tools 🛠️</h3>
+      <p>From HTML/CSS to JavaScript frameworks, I love experimenting with tools that make ideas come alive.</p>
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm">
+      <input type="text" id="name" placeholder="Your Name" required />
+      <input type="email" id="email" placeholder="Your Email" required />
+      <textarea id="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+    <p id="formResponse"></p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Simon Joven Munga | Coding Blog</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+
+🎨 CSS (style.css)
+:root {
+  --grey: #444;
+  --white: #fff;
+  --green: #8fbc8f;
+}
+
+/* Banner styles */
+.banner {
+  background-image: url('banner-image.png'); /* Replace with your actual image filename */
+  background-size: cover;
+  background-position: center;
+  height: 300px;
+  position: relative;
+  filter: brightness(0.8);
+}
+
+.overlay-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: 'Courier New', monospace;
+  letter-spacing: 4px;
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background-color: var(--white);
+  color: var(--grey);
+}
+
+header {
+  background-color: var(--green);
+  color: var(--white);
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+nav {
+  background-color: var(--grey);
+}
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+nav li {
+  margin: 0 1rem;
+}
+nav a {
+  color: var(--white);
+  text-decoration: none;
+  font-weight: bold;
+}
+nav a:hover {
+  color: var(--green);
+}
+
+section {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.post {
+  background-color: #f9f9f9;
+  border-left: 5px solid var(--green);
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+form input, form textarea {
+  margin-bottom: 1rem;
+  padding: 0.8rem;
+  border: 1px solid var(--grey);
+  border-radius: 5px;
+}
+form button {
+  background-color: var(--green);
+  color: var(--white);
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  border-radius: 5px;
+}
+form button:hover {
+  background-color: #6fa06f;
+}
+
+footer {
+  background-color: var(--grey);
+  color: var(--white);
+  text-align: center;
+  padding: 1rem;
+}
+
+
+
+⚡ JavaScript (script.js)
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const name = document.getElementById("name").value;
+  const response = document.getElementById("formResponse");
+  response.textContent = `Thanks, ${name}! Your message has been sent.`;
+
+  this.reset();
+});
+
+
+
+To make it live:
+- Upload your image as banner-image.png in the same folder.
+- Host it on GitHub Pages, Netlify, or Vercel.
+- You’ll have a sleek, mysterious blog with your personal branding front and center.
+Want to add a dark mode toggle, scroll animations, or interactive blog post loader next?
